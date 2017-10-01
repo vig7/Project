@@ -1,3 +1,9 @@
+<?php
+include('login.php');
+if(isset($_SESSION['login_user'])){
+header("location: index.html");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,11 +27,14 @@
 <div class="bor">
 <div class="mar container">
 <h2 class="top" class="big">Log in</h2><br>
+<form action="" method="POST">
 <input type="text" name="email" required placeholder="Enter your email" class="big" width="80"><br><br>
 <input type="text" name="pass" placeholder="Enter your password" class="big"><br><br>
-<input type="button" name="submit" value="Login" class="btn-primary a btn-round">
+<input type="submit" name="login" value="Login" class="btn-primary a btn-round">
 <center><hr class="l" color="black"></center><font color="white">
-<button class="btn-success" type="submit">Creat a new account</button></font><a href=""><div class="for">Forgot password?</div></a></div>
+<button class="btn-success" type="submit">Create a new account</button></font><a href=""><div class="for">Forgot password?</div></a></div>
+</form>
+<span><?php echo $error; ?></span>
 </div> 
 </center>
 </font>
