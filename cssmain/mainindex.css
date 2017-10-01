@@ -4,8 +4,8 @@
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
+.topnav a{
+    float: right;
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -13,7 +13,24 @@
     text-decoration: none;
     font-size: 17px;
 }
-
+.topnav span.no{
+      float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav span{
+      float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #ddd;
