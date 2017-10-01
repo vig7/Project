@@ -11,7 +11,7 @@ else
 $username=$_POST['email'];
 $password=$_POST['pass'];
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$connection = mysqli_connect("localhost", "root", "kronos","proj");
+$connection = mysqli_connect("localhost", "root", "","proj");
 // To protect MySQL injection for Security purpose
 $username = stripslashes($username);
 $password = stripslashes($password);
