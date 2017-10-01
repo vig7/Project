@@ -2,87 +2,11 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="cssmain/mainindex.css">
 
 	<title>Welcome</title>
 </head>
-<style type="text/css">
-	 .topnav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-.no
-{
-	a:hover{
-		color:none;
-	}
-}
-.mw{
-	width: 100%
-}
-.mw1{
-  border-right: 1px solid black;
-}
-.mw2{
-width: 50%
-}
-.mp1{
-  font-size: 2em;
-  margin-top: 10px;
-}
-.box9{
-  width: 90%;
-  min-height: 150px;
-  border:1px solid black;
-  margin-left: 5%
-}
-hr{
-  background-color: black;
-}
-.smp{
-  font-size: 1.5em;
-  margin-top: 5px;
-}
-.ssm{
-  margin-left: 1px;
-  margin-right: 1px;
-}
-.count9{
-  margin-right: 20px;
-  font-size: 1.4em;
-}
-.a9{
-  margin-right: 20%
-}
-.h5{
-  font-size: 1.4em;
-}
-.a8{
-  margin-left: 10%
-}
-</style>
 <body>
 <font face="Indie Flower">
 	<div class="topnav" id="myTopnav">
@@ -90,18 +14,18 @@ hr{
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
-  <div class="pull-right" style="float: right;"><a href="#">Sign In<span class="glyphicon glyphicon-log-in"></span></a></div>
+  <div class="pull-right" style="float: right;"><a href="#">Sign In</a><span class="glyphicon glyphicon-search"></span></div>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <div class="row"> 
-<div class="col-xl-6 mw1"><center><div class="mp1">All events</div></center><hr color="black">
+<div class="col-xl-6 mw1 col9"><center><div class="mp1">All events</div></center><hr color="black">
 <div class="box9">
   <center><div class="smp">The Heading<div></center>
   <hr>
   <div class="ssm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, lorem vestibulum pellentesque porta, urna augue ultrices sapien, eu semper elit ipsum sed nisl. Morbi congue suscipit lectus, sed viverra mauris tempus vitae. Morbi lacus nisi, vulputate porta mi et, ultrices placerat tellus. Morbi pharetra convallis purus nec egestas. Nam facilisis purus eu elit suscipit, sit amet malesuada libero consectetur. Curabitur odio urna, consequat ut orci nec, ultricies sodales risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
 </div><br>
 <div class="row h5">
-  <div class="col-xl-6"><div class="a8"><div>Issued by-</div><div>Student Council</div></div></div>
+  <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div>Student Council</div></div></div>
   <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div>
 </div>
 </div>
@@ -120,7 +44,7 @@ hr{
 
 
 </div>
-</div><div class="col-xl-6"><center><div class="mp1">Commited</div></center><hr color="black">
+</div><div class="col-xl-6 col8"><center><div class="mp1">Commited</div></center><hr color="black">
 <div class="box9">
   <center><div class="smp">The Heading<div></center>
   <hr>
