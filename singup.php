@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+include('regis.php');
+if(isset($_SESSION['login_user'])){
+header("location: index.php");
+}
+?>
 <html>
 <head>
 	<title>Sign up</title>
@@ -13,7 +18,7 @@
     <font face="Indie Flower">
 	   	<div class="topnav" id="myTopnav">
           <span class="no">StudentSpace</span>
-          <a href="localhost/Project/mylogin.php">Sign in</a>
+          <a href="mylogin.php">Sign in</a>
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
           <a href="#news">News</a>
@@ -25,6 +30,7 @@
         		Welcome to Student Space
         	</div>
           </center>
+		  <form method="POST" action="">
           <hr color="black">
             <div class="mps">
             	Name
@@ -34,7 +40,7 @@
                 <span class="glyphicon glyphicon-user">
                 </span> 
              </button>
-             <input type="text" name="name" placeholder=" Enter your Name" class="inp">
+             <input type="text" name="name" placeholder=" Enter your Name" required class="inp">
             </div>
                <div class="mps">
             	Email
@@ -44,7 +50,7 @@
                 <span class="glyphicon glyphicon-envelope">
                 </span> 
              </button>
-             <input type="text" name="name" placeholder=" Enter your Email" class="inp">
+             <input type="text" name="email" required placeholder=" Enter your Email" class="inp">
             </div>
                <div class="mps">
             	Password
@@ -54,7 +60,7 @@
                 <span class="glyphicon glyphicon-lock">
                 </span> 
              </button>
-             <input type="text" name="name" placeholder=" Enter Password" class="inp">
+             <input type="password" name="pass" required placeholder=" Enter Password" class="inp">
             </div>
                <div class="mps">
             	Confirm Password
@@ -64,7 +70,7 @@
                 <span class="glyphicon glyphicon-lock">
                 </span> 
              </button>
-             <input type="text" name="name" placeholder="Confirm Password" class="inp">
+             <input type="password" name="passconf" required placeholder="Confirm Password" class="inp">
             </div>
                <div class="mps">
             	Year
@@ -89,7 +95,7 @@
                 <span class="glyphicon glyphicon-user">
                 </span> 
              </button>
-             <input type="text" name="name" placeholder=" Enter your Roll number" class="inp">
+             <input type="text" name="rollno" placeholder=" Enter your Roll number" class="inp">
             </div>
                <div class="mps">
             	Branch
@@ -99,21 +105,15 @@
                 <span class="glyphicon glyphicon-education">
                 </span> 
              </button>
-             <input type="text" name="name" placeholder=" Enter your Branch" class="inp">
+             <input type="text" name="branch" placeholder=" Enter your Branch" class="inp">
             </div>
             <center>
-                <button type="button" class="btn btn-success btn-lg reg">Register</button>
-            </center>
+                <input type="submit" name="regis" value="Register" class="btn btn-success btn-lg reg">
+				</form>
+				<br>
+				<span><?php echo $error; ?></span>
+				</center>
         </div>
-
-
-
-
-
-
-
-
-
-	</font>
+</font>
 </body>
 </html>

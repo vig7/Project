@@ -31,11 +31,11 @@ header("location: index.php");
 <h2 class="top" class="big">Log in</h2><br>
 <form action="" method="POST">
 <input type="text" name="email" required placeholder="Enter your email" class="big" width="80"><br><br>
-<input type="text" name="pass" placeholder="Enter your password" class="big"><br><br>
+<input type="password" name="pass" placeholder="Enter your password" class="big"><br><br>
 <input type="submit" name="login" value="Login" class="btn-primary a btn-round">
 <center><hr class="l" color="black"></center><font color="white">
-<button class="btn-success" type="submit">Create a new account</button></font><a href=""><div class="for">Forgot password?</div></a></div>
 </form>
+<button class="btn-success" onclick="location.href='singup.php'">Create a new account</button></font><a href=""><div class="for">Forgot password?</div></a></div>
 <span><?php echo $error; ?></span>
 </div> 
 </center>

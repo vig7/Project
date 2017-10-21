@@ -1,0 +1,7 @@
+CREATE DATABASE proj;
+CREATE TABLE users(
+email varchar(255) NOT NULL UNIQUE,
+name varchar(255) NOT NULL,
+password varchar(255) NOT NULL,
+uid int AUTO INCREMENT PRIMARY KEY
+)
