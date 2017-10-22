@@ -1,17 +1,17 @@
+<!DOCTYPE html>
 <?php
 include('session.php');
 ?>
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Studentspace</title>
-</head>
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="cssmain/mainindex.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Studentspace</title>
+</head>
 <body>
  <font face="Indie Flower">
     <div class="topnav" id="myTopnav">

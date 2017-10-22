@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <?php
 include('login.php');
 if(isset($_SESSION['login_user'])){
 header("location: index.php");
 }
 ?>
-<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">

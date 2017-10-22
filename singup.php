@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 include('regis.php');
 if(isset($_SESSION['login_user'])){
@@ -12,7 +13,6 @@ header("location: index.php");
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="cssmain/mainsignup.css">
   <link rel="stylesheet" type="text/css" href="bootstrap/fonts/glyphicons-halflings-regular.woff">
-
 </head>
 <body>
     <font face="Indie Flower">
