@@ -67,10 +67,12 @@ width: 50%
   background-color:;
 }
 .box9{
-  width: 90%;
+  width: 60%;
   min-height: 150px;
   border:1px solid black;
-  margin-left: 5%
+  margin-left: 20%;
+  margin-right:20%;
+
 }
 hr{
   background-color: black;
@@ -101,4 +103,21 @@ hr{
 }
 .col8{
   background-color: #494E6B;
+}
+.glyphicon-envelope{
+  padding: 0;
+  font-size: 0.8em;
+}
+img{
+  height: 100px;
+  width: 100%;
+}
+.t1{
+  width: 50%;
+}
+.t2{
+  width: 400px;
+}
+hr{
+  background-color: black;
 }
