@@ -1,3 +1,6 @@
+<?php
+include('session.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,9 @@
  <font face="Indie Flower">
     <div class="topnav" id="myTopnav">
   <span class="no">StudentSpace</span>
-  <div class="pull-right" style="float: right;"><?php if(isset($_SESSION['login_user'])) echo "Welcome, $login_session";?>&nbsp;<a href=<?php if(isset($_SESSION['login_user']))echo "'logout.php'"; else echo "'mylogin.php'"?>><font color="white"></font><?php if(isset($_SESSION['login_user']))echo "Sign Out"; else echo "Sign In"?></a></div>
+  <div class="pull-right" style="float: right;"></div>
+  <a href=<?php if(isset($_SESSION['login_user']))echo "'logout.php'"; else echo "'mylogin.php'"?>><?php if(isset($_SESSION['login_user']))echo "Sign Out"; else echo "Sign In"?></a>
+  <?php if(isset($_SESSION['login_user'])) echo "<font color='white'><a>Welcome, $login_session</a></font>";?>
     <a href="#contact">Contact</a>
   <a href="#about">About</a>
   <a href="#news">News</a>
