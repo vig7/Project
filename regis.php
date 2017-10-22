@@ -21,6 +21,7 @@ $name = stripslashes($name);
 $name = mysqli_real_escape_string($connection,$name);
 $email = mysqli_real_escape_string($connection,$email);
 $password = mysqli_real_escape_string($connection,$password);
+$password=md5($password);
 $query = "SELECT email FROM users where email='$email'";
 $result = mysqli_query($connection,$query);
 $numResults = mysqli_num_rows($result);
@@ -30,7 +31,7 @@ if($numResults>=1)
         }
         else
         {
-            mysqli_query($connection,"insert into users(email,name,password) values('$email','$name','md5($password)')");
+            mysqli_query($connection,"insert into users(email,name,password) values('$email','$name','$password')");
             $error = "Signup Sucessful. Redirecting to <a href='mylogin.php'>sign in</a> in 5 seconds.";
 			header( "refresh:5; url=mylogin.php" );
         }
