@@ -18,7 +18,8 @@ $password = stripslashes($password);
 $email = mysqli_real_escape_string($connection,$email);
 $password = mysqli_real_escape_string($connection,$password);
 // SQL query to fetch information of registerd users and finds user match.
-$query = mysqli_query($connection,"select * from users where password='md5($password)' AND email='$email'");
+$password=md5($password);
+$query = mysqli_query($connection,"select * from users where password='$password' AND email='$email'");
 $rows = mysqli_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$email; // Initializing Session
