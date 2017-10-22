@@ -4,14 +4,14 @@ include('session.php');
 ?>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <title>Studentspace</title>
+</head>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="cssmain/mainindex.css">
+  <link rel="stylesheet" type="text/css" href="cssmain/mainadmin.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Studentspace</title>
-</head>
 <body>
  <font face="Indie Flower">
     <div class="topnav" id="myTopnav">
@@ -60,7 +60,7 @@ include('session.php');
   </div>
   <ul class="nav nav-pills">
     <li class="active t1"><a data-toggle="pill" href="#home"><center>Active</center></a></li>
-    <li><a data-toggle="pill" class="t2" href="#menu1"><center> Commited</center></a></li>
+    <li><a data-toggle="pill" class="t2" href="#menu1"><center> <?php if($adm==0) echo 'Commited'; else echo 'Create task';?></center></a></li>
   </ul>
   
   <div class="tab-content">
@@ -83,13 +83,26 @@ include('session.php');
     <div id="home" class="tab-pane fade in active">
         <br>
       <div class="box9">
-  <center><div class="smp">The Heading<div></center>
+  <?php if($adm==0){
+	  echo('<center><div class="smp">The Heading<div></center>
   <hr>
   <div class="ssm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, lorem vestibulum pellentesque porta, urna augue ultrices sapien, eu semper elit ipsum sed nisl. Morbi congue suscipit lectus, sed viverra mauris tempus vitae. Morbi lacus nisi, vulputate porta mi et, ultrices placerat tellus. Morbi pharetra convallis purus nec egestas. Nam facilisis purus eu elit suscipit, sit amet malesuada libero consectetur. Curabitur odio urna, consequat ut orci nec, ultricies sodales risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
 </div><br>
 <div class="row h5">
   <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div>Student Council</div></div></div>
-  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div>
+  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div>');
+  }
+  else{
+	  echo('<div class="admin1"><br>
+      <span>Enter the heading:</span>
+    
+    <input type="text" name="heading" class="ad"><br><br>
+    <span>Enter description:&nbsp;</span><input type="text" name="des" class="ad"><br><br>
+    <span>Enter Quantity:&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="number" name="count" class="ad"><br><br>
+    <span>Eneter Deadline:&nbsp;&nbsp;</span><input type="date" name="deadline"><br><br></div>
+    <center><button class="btn-primary r1">Post</button></center>');
+  }
+  ?>
 </div>
 </div>
 <br>
