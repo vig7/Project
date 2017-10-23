@@ -10,12 +10,12 @@ header("location: test.php");
 	<title>Sign up</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="cssmain/mainsignup.css">
   <link rel="stylesheet" type="text/css" href="bootstrap/fonts/glyphicons-halflings-regular.woff">
 </head>
 <body>
-    <font face="Indie Flower">
+    <font face="Oswald">
 	   	<div class="topnav" id="myTopnav">
           <span class="no">StudentSpace</span>
           <a href="mylogin.php">Sign in</a>
