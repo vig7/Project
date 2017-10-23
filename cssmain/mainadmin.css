@@ -113,10 +113,11 @@ img{
   width: 100%;
 }
 .t1{
-  width: 50%;
+width: 40%;
+margin-left: 10%
 }
 .t2{
-  width: 400px;
+  width: 40%;
 }
 hr{
   background-color: black;
@@ -133,4 +134,23 @@ hr{
   font-size: 1.5em;
   margin-bottom: 20px;
   width: 20%;
+}
+.downb{
+  background-color: black;
+
+}
+.downb1{
+  color: white;
+  margin-left: 30%;
+}
+.downb2{
+  color: white;
+}
+.btt{
+  margin-top: 40px;
+  background-color: #CBD4EF;
+  font-size: 1.5em;
+}
+.btt a{
+  text-decoration: none;
 }

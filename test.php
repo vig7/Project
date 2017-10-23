@@ -10,15 +10,15 @@ header("location: mylogin.php");
     <title>Studentspace</title>
 </head>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="cssmain/mainadmin.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
- <font face="Indie Flower">
+ <font face="Oswald">
     <div class="topnav" id="myTopnav">
-  <span class="no">StudentSpace</span>
+  <span class="no" id="top">StudentSpace</span>
   <div class="pull-right" style="float: right;"></div>
   <a href=<?php if(isset($_SESSION['login_user']))echo "'logout.php'"; else echo "'mylogin.php'"?>><?php if(isset($_SESSION['login_user']))echo "Sign Out"; else echo "Sign In"?></a>
   <?php if(isset($_SESSION['login_user'])) echo "<font color='white'><a>Welcome, $login_session</a></font>";?>
@@ -63,7 +63,7 @@ header("location: mylogin.php");
   </div>
   <ul class="nav nav-pills">
     <li class="active t1"><a data-toggle="pill" href="#home"><center>Active</center></a></li>
-    <li><a data-toggle="pill" class="t2" href="#menu1"><center> <?php if($adm==0) echo 'Commited'; else echo 'Create task';?></center></a></li>
+    <li class="t2"><a data-toggle="pill" href="#menu1"><center> <?php if($adm==0) echo 'Commited'; else echo 'Create task';?></center></a></li>
   </ul>
   
   <div class="tab-content">
@@ -110,7 +110,30 @@ header("location: mylogin.php");
 </div>
 <br>
     </div>
+  </div></center></div>
+  <div class="btt"><a href="#top"><center>Back to top</center></div></a>
+  <div class="downb row">
+    <div class="col-xl-6 col-sm-12">
+       <div class="downb1">
+         <div>
+          Sies Gst
+       </div>    
+       <div>
+         Vidyapuram,Sector 5
+       </div>  
+       <div>
+          Nerul, Navi Mumbai
+       </div>
+       <div>
+         Maharashtra 400706
+       </div>
+    </div>
   </div>
+    <div class="col-xl-6 downb2">
+      yo
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
