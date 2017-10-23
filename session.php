@@ -11,6 +11,7 @@ $ses_sql=mysqli_query($connection,"select * from users where email='$user_check'
 $row = mysqli_fetch_assoc($ses_sql);
 $login_session =$row['name'];
 $uid =$row['uid'];
+$adm=$row['adm'];
 if(!isset($login_session)){
 mysqli_close($connection); // Closing Connection // Redirecting To Home Page
 }

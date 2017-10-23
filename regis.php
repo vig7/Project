@@ -1,4 +1,5 @@
 <?php
+session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 if (isset($_POST['regis'])) {
 if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
