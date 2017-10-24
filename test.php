@@ -19,6 +19,7 @@ header("location: mylogin.php");
  <font face="Oswald">
     <div class="topnav" id="myTopnav">
   <span class="no" id="top">StudentSpace</span>
+  <div class="collapse navbar-collapse" id="myNavbar">
   <div class="pull-right" style="float: right;"></div>
   <a href=<?php if(isset($_SESSION['login_user']))echo "'logout.php'"; else echo "'mylogin.php'"?>><?php if(isset($_SESSION['login_user']))echo "Sign Out"; else echo "Sign In"?></a>
   <?php if(isset($_SESSION['login_user'])) echo "<font color='white'><a>Welcome, $login_session</a></font>";?>
@@ -27,8 +28,9 @@ header("location: mylogin.php");
   <a href="#news">News</a>
   <a href="#home">Home</a>
   <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>-->
-</div>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+</div></div>
+<div class="row">
+  <div id="myCarousel" class="carousel slide col-xl-6" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -61,6 +63,7 @@ header("location: mylogin.php");
       <span class="sr-only">Next</span>
     </a>
   </div>
+  <div class="col-xl-6"><br><br>
   <ul class="nav nav-pills">
     <li class="active t1"><a data-toggle="pill" href="#home"><center>Active</center></a></li>
     <li class="t2"><a data-toggle="pill" href="#menu1"><center> <?php if($adm==0) echo 'Commited'; else echo 'Create task';?></center></a></li>
@@ -110,7 +113,7 @@ header("location: mylogin.php");
 </div>
 <br>
     </div>
-  </div></center></div>
+  </div></center></div></div></div></div>
   <div class="btt"><a href="#top"><center>Back to top</center></div></a>
   <div class="downb row">
     <div class="col-xl-6 col-sm-12">
