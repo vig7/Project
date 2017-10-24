@@ -30,7 +30,7 @@ header("location: mylogin.php");
   <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>-->
 </div></div>
 <div class="row">
-  <div id="myCarousel" class="carousel slide col-xl-6" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -42,14 +42,20 @@ header("location: mylogin.php");
     <div class="carousel-inner">
       <div class="item active">
         <img src="https://static.pexels.com/photos/12064/pexels-photo-12064.jpeg" alt="Los Angeles" style="width:; height: 550px">
+        <div class="thead">Creative commons</div>
+        <div class="tside">Improve creative coordination by participation in collaborative tasks.</div>
       </div>
 
       <div class="item">
         <img src="https://static.pexels.com/photos/296878/pexels-photo-296878.jpeg" alt="Chicago" style="width:; height: 550px">
+           <div class="thead">Skill share</div>
+        <div class="tside">Contribute skills to analyse and solve real world problems for positive impact.</div>
       </div>
     
       <div class="item">
         <img src="https://static.pexels.com/photos/297755/pexels-photo-297755.jpeg" alt="New york" style="width:; height: 550px">
+           <div class="thead">Credible experience</div>
+        <div class="tside">Boost experience and add practical knowledge to improve your scope in the outside world.</div>
       </div>
     </div>
 
@@ -63,7 +69,7 @@ header("location: mylogin.php");
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <div class="col-xl-6"><br><br>
+  <div class=""><br><br>
   <ul class="nav nav-pills">
     <li class="active t1"><a data-toggle="pill" href="#home"><center>Active</center></a></li>
     <li class="t2"><a data-toggle="pill" href="#menu1"><center> <?php if($adm==0) echo 'Commited'; else echo 'Create task';?></center></a></li>

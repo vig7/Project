@@ -154,3 +154,17 @@ hr{
 .btt a{
   text-decoration: none;
 }
+.thead{
+  position: absolute;
+    bottom: 400px;
+    left: 150px;
+    color: white;
+    font-size: 3em;
+}
+.tside{
+  position: absolute;
+  bottom: 300px;
+  left: 300px;
+  color: white;
+  font-size: 2em;
+}
