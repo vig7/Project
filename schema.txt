@@ -5,11 +5,12 @@ name varchar(255) NOT NULL,
 password varchar(255) NOT NULL,
 adm boolean not null default 0,
 uid int AUTO_INCREMENT PRIMARY KEY
-)
+);
 CREATE TABLE task(
 title varchar(255) NOT NULL,
 description varchar(255) NOT NULL,
 deadline date NOT NULL,
 quantity int NOT NULL,
+issuer varchar(255) NOT NULL,
 tid int AUTO_INCREMENT PRIMARY KEY
-)
+);

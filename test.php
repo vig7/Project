@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include('session.php');
+include('formpro.php');
 if(!isset($_SESSION['login_user'])){
 header("location: mylogin.php");
 }
@@ -78,6 +79,7 @@ header("location: mylogin.php");
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
         <br>
+		<center><span><?php echo $formconf; ?></span></center>
       <div class="box9">
   <center><div class="smp">The Heading<div></center>
   <hr color="black">
@@ -105,14 +107,15 @@ header("location: mylogin.php");
   <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div>');
   }
   else{
+	  
 	  echo('<div class="admin1"><br>
       <span>Enter the heading:</span>
-    
+    <form method="POST">
     <input type="text" name="heading" class="ad"><br><br>
     <span>Enter description:&nbsp;</span><input type="text" name="des" class="ad"><br><br>
     <span>Enter Quantity:&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="number" name="count" class="ad"><br><br>
-    <span>Eneter Deadline:&nbsp;&nbsp;</span><input type="date" name="deadline"><br><br></div>
-    <center><button class="btn-primary r1">Post</button></center>');
+    <span>Enter Deadline:&nbsp;&nbsp;</span><input type="date" name="deadline"><br><br></div>
+    <center><input type="submit" name="create" class="btn-primary r1" value="Post"></input></center>');
   }
   ?>
 </div>
