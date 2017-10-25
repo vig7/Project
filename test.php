@@ -88,7 +88,7 @@ header("location: mylogin.php");
 					if ($active->num_rows > 0){
 						while($list = $active->fetch_assoc()){?>
      <div class="box9">
-  <center><div class="smp"><?php echo $list['title'];?><div></center>
+  <center><div class="smp"><?php echo $list['title'];?></div></center>
   <hr color="black">
   <div class="ssm"><?php echo $list['description'];?> 
 </div><br>
@@ -96,19 +96,18 @@ header("location: mylogin.php");
   <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div><?php echo $list['issuer'];?><br><br><div>Needs <?php echo $list['quantity'];?> more </div></div></div></div>
   <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div><?php echo $list['deadline'];?> <br><br><form method="POST" ><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"><input type="SUBMIT" name='<?php if($adm==0)echo "enroll"; else echo "viewlist" ?>' class="btn-primary" value='<?php if($adm==0)echo "Enroll"; else echo "Candidate List" ?>'></form></div></div></div>
 </div>
-</div></div></div></div>
+</div>
 <br>
-    </div>
 					<?php }}
 					?>
 
-
+</div>
      <div id="menu1" class="tab-pane fade">
         <br>
       <div class="box9">
 
   <?php if($adm==0){?>
-  <center><div class="smp">The Heading<div></center>
+  <center><div class="smp">The Heading</div></center>
   <hr>
   <div class="ssm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, lorem vestibulum pellentesque porta, urna augue ultrices sapien, eu semper elit ipsum sed nisl. Morbi congue suscipit lectus, sed viverra mauris tempus vitae. Morbi lacus nisi, vulputate porta mi et, ultrices placerat tellus. Morbi pharetra convallis purus nec egestas. Nam facilisis purus eu elit suscipit, sit amet malesuada libero consectetur. Curabitur odio urna, consequat ut orci nec, ultricies sodales risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
 </div><br>
@@ -132,10 +131,9 @@ header("location: mylogin.php");
   }
   ?>
 </div>
-</div></div></div></div></div>
+</div></div>
 <br>
-    </div>
-  </div></center></div></div></div></div>
+    
   <div class="btt"><a href="#top"><center>Back to top</center></div></a>
   <div class="downb">
   <div class="row">
