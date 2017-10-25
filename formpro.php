@@ -27,6 +27,14 @@ if (isset($_POST['enroll'])) {
 	else
 			$formconf="Unknown error. Contact site admin";
 	$query = mysqli_query($connection,"UPDATE task SET quantity = quantity-1 WHERE tid = '$tid'");
-	}
+}
 	
+if (isset($_POST['delete'])) {
+	$tid=$_POST['tid'];
+	$query = mysqli_query($connection,"delete from comit where t_id='$tid'");
+	if($query = mysqli_query($connection,"delete from task where tid='$tid'"))
+			$formconf="Delete successfull";
+	else
+			$formconf="Unknown error. Contact site admin";
+}
 ?>

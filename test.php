@@ -25,10 +25,9 @@ header("location: mylogin.php");
   <div class="pull-right" style="float: right;"></div>
   <a href=<?php if(isset($_SESSION['login_user']))echo "'logout.php'"; else echo "'mylogin.php'"?>><?php if(isset($_SESSION['login_user']))echo "Sign Out"; else echo "Sign In"?></a>
   <?php if(isset($_SESSION['login_user'])) echo "<font color='white'><a>Welcome, $login_session</a></font>";?>
-    <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="#news">News</a>
-  <a href="#home">Home</a>
+          <a href="contactus.html">Contact</a>
+          <a href="aboutus.html">About</a>
+
   <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>-->
 </div></div>
 <div class="row">
@@ -44,7 +43,7 @@ header("location: mylogin.php");
     <div class="carousel-inner">
       <div class="item active">
         <img src="https://static.pexels.com/photos/12064/pexels-photo-12064.jpeg" alt="Los Angeles" style="width:; height: 550px">
-        <div class="thead">What is student space?</div>
+ <div class="thead">What is student space?</div>
         <div class="tside col-sm-0">StudentSpace was created for students to contibute their skillsets and<br> resources towards collaboration and meaningful development.</div>
       </div>
 
@@ -56,7 +55,7 @@ header("location: mylogin.php");
     
       <div class="item">
         <img src="https://static.pexels.com/photos/297755/pexels-photo-297755.jpeg" alt="New york" style="width:; height: 550px">
-           <div class="thead">Why do you need it?</div>
+           <div class="thead">Credible experience</div>
         <div class="tside">Boost experience and add practical knowledge to improve your scope in the outside world.</div>
       </div>
     </div>
@@ -84,7 +83,7 @@ header("location: mylogin.php");
 		<?php if($adm==1)
 			$active=mysqli_query($connection,"select * from task where deadline>(select curdate())");
 					else
-			$active=mysqli_query($connection,"select * from task where deadline>(select curdate()) and tid not in (select t_id from comit where u_id != '$uid'");	
+			$active=mysqli_query($connection,"select * from task where deadline>(select curdate()) and tid not in (select t_id from comit where u_id = '$uid')");	
 					if ($active->num_rows > 0){
 						while($list = $active->fetch_assoc()){?>
      <div class="box9">
@@ -94,7 +93,7 @@ header("location: mylogin.php");
 </div><br>
 <div class="row h5">
   <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div><?php echo $list['issuer'];?><br><br><div>Needs <?php echo $list['quantity'];?> more </div></div></div></div>
-  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div><?php echo $list['deadline'];?> <br><br><form method="POST" ><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"><input type="SUBMIT" name='<?php if($adm==0)echo "enroll"; else echo "viewlist" ?>' class="btn-primary" value='<?php if($adm==0)echo "Enroll"; else echo "Candidate List" ?>'></form></div></div></div>
+  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div><?php echo $list['deadline'];?> <br><br><form method="POST" ><?php if($adm==1 && $login_session==$list['issuer']) echo '<input type="submit" name="delete" value="Delete" class="btn-primary">';?><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"></form><form method="POST" <?php if($adm==1) echo 'action="contestant.php"';?>><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"><input type="SUBMIT" name='<?php if($adm==0)echo "enroll"; else echo "viewlist" ?>' class="btn-primary" value='<?php if($adm==0)echo "Enroll"; else echo "Candidate List" ?>'></form></div></div></div>
 </div>
 </div>
 <br>
@@ -106,16 +105,19 @@ header("location: mylogin.php");
         <br>
       <div class="box9">
 
-  <?php if($adm==0){?>
-  <center><div class="smp">The Heading</div></center>
+  <?php if($adm==0){
+	  $commitl=mysqli_query($connection,"select * from task where deadline>(select curdate()) and tid in (select t_id from comit where u_id = '$uid')");
+	  if ($commitl->num_rows > 0){
+						while($list2 = $commitl->fetch_assoc()){?>
+  <center><div class="smp"><?php echo $list2['title'];?></div></center>
   <hr>
-  <div class="ssm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, lorem vestibulum pellentesque porta, urna augue ultrices sapien, eu semper elit ipsum sed nisl. Morbi congue suscipit lectus, sed viverra mauris tempus vitae. Morbi lacus nisi, vulputate porta mi et, ultrices placerat tellus. Morbi pharetra convallis purus nec egestas. Nam facilisis purus eu elit suscipit, sit amet malesuada libero consectetur. Curabitur odio urna, consequat ut orci nec, ultricies sodales risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
+  <div class="ssm"><?php echo $list2['description'];?> 
 </div><br>
 <div class="row h5">
-  <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div>Student Council</div></div></div>
-  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div></div>
+  <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div><?php echo $list2['issuer'];?></div></div></div>
+  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div><?php echo $list2['deadline'];?><br><br><form method="POST" action="contestant.php"><input type="hidden" name="tid" value="<?php echo $list2['tid'];?>"><input type="SUBMIT" name="viewlist" value="Candidate List" class="btn-primary"></form></div></div></div></div>
   <?php
-  }
+  }}}
   else{
 	  ?>
 	  <div class="admin1"><br>

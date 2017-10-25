@@ -18,11 +18,8 @@ header("location: test.php");
     <font face="Oswald">
 	   	<div class="topnav" id="myTopnav">
           <span class="no">StudentSpace</span>
-          <a href="mylogin.php">Sign in</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-          <a href="#news">News</a>
-          <a href="#home">Home</a>
+          <a href="contactus.html">Contact</a>
+          <a href="aboutus.html">About</a>
         </div>
         <div class="a1">
           <center>

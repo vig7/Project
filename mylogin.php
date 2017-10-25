@@ -18,10 +18,9 @@ header("location: test.php");
 <hr color="black">-->
 <div class="topnav" id="myTopnav">
    <span>StudentSpace</span>
-  <a href="#about">About</a>
-   <a href="#contact">Contact</a>
-<a href="#news">News</a>
- <a href="#home">Home</a>
+          <a href="contactus.html">Contact</a>
+          <a href="aboutus.html">About</a>
+
   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
