@@ -70,8 +70,8 @@ header("location: mylogin.php");
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
-  <div class=""><br><br>
+  </div></div>
+  <br><br>
   <ul class="nav nav-pills">
     <li class="active t1"><a data-toggle="pill" href="#home"><center>Active</center></a></li>
     <li class="t2"><a data-toggle="pill" href="#menu1"><center> <?php if($adm==0) echo 'Commited'; else echo 'Create task';?></center></a></li>
@@ -96,16 +96,17 @@ header("location: mylogin.php");
   <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div><?php echo $list['issuer'];?><br><br><div>Needs <?php echo $list['quantity'];?> more </div></div></div></div>
   <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div><?php echo $list['deadline'];?> <br><br><form method="POST" ><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"><input type="SUBMIT" name='<?php if($adm==0)echo "enroll"; else echo "viewlist" ?>' class="btn-primary" value='<?php if($adm==0)echo "Enroll"; else echo "Candidate List" ?>'></form></div></div></div>
 </div>
-</div>
+</div></div></div></div>
 <br>
     </div>
 					<?php }}
 					?>
 
-<div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
+
+     <div id="menu1" class="tab-pane fade">
         <br>
       <div class="box9">
+
   <?php if($adm==0){?>
   <center><div class="smp">The Heading<div></center>
   <hr>
@@ -113,14 +114,15 @@ header("location: mylogin.php");
 </div><br>
 <div class="row h5">
   <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div>Student Council</div></div></div>
-  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div>
+  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div></div>
   <?php
   }
   else{
 	  ?>
 	  <div class="admin1"><br>
+      <form method="POST">
       <span>Enter the heading:</span>
-    <form method="POST">
+    
     <input type="text" name="heading" class="ad"><br><br>
     <span>Enter description:&nbsp;</span><input type="text" name="des" class="ad"><br><br>
     <span>Enter Quantity:&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="number" name="count" class="ad"><br><br>
@@ -130,7 +132,7 @@ header("location: mylogin.php");
   }
   ?>
 </div>
-</div>
+</div></div></div></div></div>
 <br>
     </div>
   </div></center></div></div></div></div>
@@ -157,6 +159,6 @@ header("location: mylogin.php");
     </div>
   </div>
 </div>
-
+</font>
 </body>
 </html>
