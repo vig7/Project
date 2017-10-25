@@ -14,3 +14,9 @@ quantity int NOT NULL,
 issuer varchar(255) NOT NULL,
 tid int AUTO_INCREMENT PRIMARY KEY
 );
+CREATE TABLE COMIT(
+u_id int,
+t_id int,
+FOREIGN KEY (u_id) REFERENCES users(uid),
+FOREIGN KEY (t_id) REFERENCES task(tid)
+)

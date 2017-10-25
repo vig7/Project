@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<?php
+<html>
+<head>
+    <title>Studentspace</title>
+	<?php
 include('session.php');
 include('formpro.php');
 if(!isset($_SESSION['login_user'])){
 header("location: mylogin.php");
 }
 ?>
-<html>
-<head>
-    <title>Studentspace</title>
-</head>
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="cssmain/mainadmin.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+  
 <body>
  <font face="Oswald">
     <div class="topnav" id="myTopnav">
@@ -79,42 +80,64 @@ header("location: mylogin.php");
     <div id="home" class="tab-pane fade in active">
         <br>
 		<center><span><?php echo $formconf; ?></span></center>
-      <div class="box9">
-  <center><div class="smp">The Heading<div></center>
+		<?php if($adm==1)
+			$active=mysqli_query($connection,"select * from task where deadline>(select curdate())");
+					else
+			$active=mysqli_query($connection,"select * from task where deadline>(select curdate()) and tid not in (select t_id from comit where u_id != '$uid'");	
+					if ($active->num_rows > 0){
+						while($list = $active->fetch_assoc()){?>
+     <div class="box9">
+  <center><div class="smp"><?php echo $list['title'];?><div></center>
   <hr color="black">
-  <div class="ssm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, lorem vestibulum pellentesque porta, urna augue ultrices sapien, eu semper elit ipsum sed nisl. Morbi congue suscipit lectus, sed viverra mauris tempus vitae. Morbi lacus nisi, vulputate porta mi et, ultrices placerat tellus. Morbi pharetra convallis purus nec egestas. Nam facilisis purus eu elit suscipit, sit amet malesuada libero consectetur. Curabitur odio urna, consequat ut orci nec, ultricies sodales risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
+  <div class="ssm"><?php echo $list['description'];?> 
 </div><br>
 <div class="row h5">
-  <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div>Student Council<br><br><div>Count 0/12</div></div></div></div>
-  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17<br><br><button class="btn-primary">Enroll</button></div></div></div>
+  <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div><?php echo $list['issuer'];?><br><br><div>Needs <?php echo $list['quantity'];?> more </div></div></div></div>
+  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div><?php echo $list['deadline'];?> <br><br><form method="POST" ><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"><input type="SUBMIT" name='<?php if($adm==0)echo "enroll"; else echo "viewlist" ?>' class="btn-primary" value='<?php if($adm==0)echo "Enroll"; else echo "Candidate List" ?>'></form></div></div></div>
 </div>
 </div>
 <br>
     </div>
-    <div id="menu1" class="tab-pane fade">
+					<?php }}
+					?>
+
 <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
         <br>
       <div class="box9">
-  <?php if($adm==0){
-	  echo('<center><div class="smp">The Heading<div></center>
+  <?php if($adm==0){?>
+  <center><div class="smp">The Heading<div></center>
   <hr>
   <div class="ssm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet, lorem vestibulum pellentesque porta, urna augue ultrices sapien, eu semper elit ipsum sed nisl. Morbi congue suscipit lectus, sed viverra mauris tempus vitae. Morbi lacus nisi, vulputate porta mi et, ultrices placerat tellus. Morbi pharetra convallis purus nec egestas. Nam facilisis purus eu elit suscipit, sit amet malesuada libero consectetur. Curabitur odio urna, consequat ut orci nec, ultricies sodales risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
 </div><br>
 <div class="row h5">
   <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div>Student Council</div></div></div>
-  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div>');
+  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div>29/10/17</div></div></div>
+  <?php
   }
   else{
+<<<<<<< HEAD
 	  
 	  echo('<div class="admin1"><br>
       <form method="POST">
+=======
+	  ?>
+	  <div class="admin1"><br>
+>>>>>>> 8ebc20bd6d8b6cfa7b00b2cceaacf546065afba2
       <span>Enter the heading:</span>
     <input type="text" name="heading" class="ad"><br><br>
+<<<<<<< HEAD
     <span>Enter description:&nbsp;&nbsp;</span><input type="text" name="des" class="ad"><br><br>
     <span>Enter Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="number" name="count" class="ad"><br><br>
     <span>Enter Deadline:&nbsp;&nbsp;&nbsp;</span><input type="date" name="deadline"><br><br></div>
     <center><input type="submit" name="create" class="btn-primary r1" value="Post"></input></center>');
+=======
+    <span>Enter description:&nbsp;</span><input type="text" name="des" class="ad"><br><br>
+    <span>Enter Quantity:&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="number" name="count" class="ad"><br><br>
+    <span>Enter Deadline:&nbsp;&nbsp;</span><input type="date" name="deadline"><br><br></div>
+    <center><input type="submit" name="create" class="btn-primary r1" value="Post"></input></form></center>
+	<?php
+>>>>>>> 8ebc20bd6d8b6cfa7b00b2cceaacf546065afba2
   }
   ?>
 </div>
