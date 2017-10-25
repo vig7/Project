@@ -184,3 +184,15 @@ hr{
     margin-left: 30%;
   }
 }
+@media(max-width: 775px)
+{
+  .tside{
+    bottom: 200px;
+  }
+}
+@media(max-width: 460px){
+  .tside{
+    left: 150px;
+    bottom: 150px;
+  }
+}
