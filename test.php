@@ -20,7 +20,6 @@ header("location: mylogin.php");
  <font face="Oswald">
     <div class="topnav" id="myTopnav">
   <span class="no" id="top">StudentSpace</span>
-  <div class="collapse navbar-collapse" id="myNavbar">
   <div class="pull-right" style="float: right;"></div>
   <a href=<?php if(isset($_SESSION['login_user']))echo "'logout.php'"; else echo "'mylogin.php'"?>><?php if(isset($_SESSION['login_user']))echo "Sign Out"; else echo "Sign In"?></a>
   <?php if(isset($_SESSION['login_user'])) echo "<font color='white'><a>Welcome, $login_session</a></font>";?>
@@ -29,7 +28,7 @@ header("location: mylogin.php");
   <a href="#news">News</a>
   <a href="#home">Home</a>
   <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>-->
-</div></div>
+</div>
 <div class="row">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -70,7 +69,7 @@ header("location: mylogin.php");
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <div class=""><br><br>
+  <div></div></div><br><br>
   <ul class="nav nav-pills">
     <li class="active t1"><a data-toggle="pill" href="#home"><center>Active</center></a></li>
     <li class="t2"><a data-toggle="pill" href="#menu1"><center> <?php if($adm==0) echo 'Commited'; else echo 'Create task';?></center></a></li>
@@ -109,25 +108,26 @@ header("location: mylogin.php");
   else{
 	  
 	  echo('<div class="admin1"><br>
+      <form method="POST">
       <span>Enter the heading:</span>
-    <form method="POST">
     <input type="text" name="heading" class="ad"><br><br>
-    <span>Enter description:&nbsp;</span><input type="text" name="des" class="ad"><br><br>
-    <span>Enter Quantity:&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="number" name="count" class="ad"><br><br>
-    <span>Enter Deadline:&nbsp;&nbsp;</span><input type="date" name="deadline"><br><br></div>
+    <span>Enter description:&nbsp;&nbsp;</span><input type="text" name="des" class="ad"><br><br>
+    <span>Enter Quantity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="number" name="count" class="ad"><br><br>
+    <span>Enter Deadline:&nbsp;&nbsp;&nbsp;</span><input type="date" name="deadline"><br><br></div>
     <center><input type="submit" name="create" class="btn-primary r1" value="Post"></input></center>');
   }
   ?>
 </div>
-</div>
+</div></div>
 <br>
     </div>
   </div></center></div></div></div></div>
   <div class="btt"><a href="#top"><center>Back to top</center></div></a>
-  <div class="downb row">
-    <div class="col-xl-6 col-sm-12">
-       <div class="downb1">
-         <div>
+  <div class="downb">
+  <div class="row">
+    <div class="col-xl-6 col-sm-12 alink">
+       <a href="https://www.google.co.in/maps?q=siesgst+nerul&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjgh-Dm0YvXAhWBso8KHQWDBoQQ_AUICygC"><div class="downb1">
+         <br><br><div>
           Sies Gst
        </div>    
        <div>
@@ -138,14 +138,18 @@ header("location: mylogin.php");
        </div>
        <div>
          Maharashtra 400706
-       </div>
+       </div></a>
     </div>
   </div>
-    <div class="col-xl-6 downb2">
-      yo
-    </div>
+    <div class="col-xl-6 col-sm-10 downb2"><br><br>
+      <div>Made by</div>
+      <div>Students of</div>
+      <div>Computer Department</div>
+      <div>SIES GST</div>
+    </div></div>
+    <br><center><div class="downbl">&copy;Computer Department of SIES GST</div></center>
   </div>
 </div>
-
+</font>
 </body>
 </html>
