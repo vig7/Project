@@ -44,19 +44,19 @@ header("location: mylogin.php");
     <div class="carousel-inner">
       <div class="item active">
         <img src="https://static.pexels.com/photos/12064/pexels-photo-12064.jpeg" alt="Los Angeles" style="width:; height: 550px">
-        <div class="thead">Creative commons</div>
-        <div class="tside">Improve creative coordination by participation in collaborative tasks.</div>
+        <div class="thead">What is student space?</div>
+        <div class="tside col-sm-0">StudentSpace was created for students to contibute their skillsets and<br> resources towards collaboration and meaningful development.</div>
       </div>
 
       <div class="item">
         <img src="https://static.pexels.com/photos/296878/pexels-photo-296878.jpeg" alt="Chicago" style="width:; height: 550px">
-           <div class="thead">Skill share</div>
+           <div class="thead">How does it help you?</div>
         <div class="tside">Contribute skills to analyse and solve real world problems for positive impact.</div>
       </div>
     
       <div class="item">
         <img src="https://static.pexels.com/photos/297755/pexels-photo-297755.jpeg" alt="New york" style="width:; height: 550px">
-           <div class="thead">Credible experience</div>
+           <div class="thead">Why do you need it?</div>
         <div class="tside">Boost experience and add practical knowledge to improve your scope in the outside world.</div>
       </div>
     </div>

@@ -164,7 +164,7 @@ hr{
 }
 .tside{
   position: absolute;
-  bottom: 300px;
+  bottom: 260px;
   left: 300px;
   color: white;
   font-size: 2em;
@@ -187,12 +187,12 @@ hr{
 @media(max-width: 775px)
 {
   .tside{
-    bottom: 200px;
+    bottom: 100px;
   }
 }
 @media(max-width: 460px){
   .tside{
     left: 150px;
-    bottom: 150px;
+    bottom: 100px;
   }
 }

@@ -49,3 +49,63 @@
 .taskname{
     font-size: 2em;
 }
+.downb{
+  background-color: black;
+  font-size: 1.3em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.downb1{
+  color: white;
+  margin-left: 30%;
+}
+.downb2{
+  color: white;
+}
+.btt{
+  margin-top: 40px;
+  background-color: #CBD4EF;
+  font-size: 2em;
+}
+.btt a{
+  text-decoration: none;
+}
+.thead{
+  position: absolute;
+    bottom: 400px;
+    left: 150px;
+    color: white;
+    font-size: 3em;
+}
+.tside{
+  position: absolute;
+  bottom: 300px;
+  left: 300px;
+  color: white;
+  font-size: 2em;
+}
+.alink a{
+  color: white;
+}
+.alink a:hover{
+  color: white;
+}
+.downbl{
+  color: white;
+  margin-left: 0;
+}
+@media(max-width:768px){
+  .downb2{
+    margin-left: 30%;
+  }
+}
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
