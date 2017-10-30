@@ -30,6 +30,7 @@ header("location: mylogin.php");
 
   <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>-->
 </div></div>
+</div></div>
 <div class="row">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -54,8 +55,8 @@ header("location: mylogin.php");
       </div>
     
       <div class="item">
-        <img src="https://static.pexels.com/photos/297755/pexels-photo-297755.jpeg" alt="New york" style="width:; height: 550px">
-           <div class="thead">Credible experience</div>
+        <img src="https://static.pexels.com/photos/355988/pexels-photo-355988.jpeg" alt="New york" style="width:; height: 550px">
+           <div class="thead">Why do you need it?</div>
         <div class="tside">Boost experience and add practical knowledge to improve your scope in the outside world.</div>
       </div>
     </div>
@@ -93,7 +94,7 @@ header("location: mylogin.php");
 </div><br>
 <div class="row h5">
   <div class="col-xl-6" ><div class="a8"><div>Issued by-</div><div><?php echo $list['issuer'];?><br><br><div>Needs <?php echo $list['quantity'];?> more </div></div></div></div>
-  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div><?php echo $list['deadline'];?> <br><br><form method="POST" ><?php if($adm==1 && $login_session==$list['issuer']) echo '<input type="submit" name="delete" value="Delete" class="btn-primary">';?><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"></form><form method="POST" <?php if($adm==1) echo 'action="contestant.php"';?>><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"><input type="SUBMIT" name='<?php if($adm==0)echo "enroll"; else echo "viewlist" ?>' class="btn-primary" value='<?php if($adm==0)echo "Enroll"; else echo "Candidate List" ?>'></form></div></div></div>
+  <div class="col-xl-6" align="right"><div class="a9"><div>Deadline</div><div><?php echo $list['deadline'];?> <br><br><form method="POST" ><?php if($adm==1 && $login_session==$list['issuer']) echo '<input type="submit" name="delete" value="Delete" class="btn-danger">';?><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"></form><form method="POST" <?php if($adm==1) echo 'action="contestant.php"';?>><input type="hidden" name="tid" value="<?php echo $list['tid'];?>"><input type="SUBMIT" name='<?php if($adm==0)echo "enroll"; else echo "viewlist" ?>' class="btn-primary" value='<?php if($adm==0)echo "Enroll"; else echo "Candidate List" ?>'></form></div></div></div>
 </div>
 </div>
 <br>

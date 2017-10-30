@@ -17,7 +17,7 @@ header("location: test.php");
 <body>
     <font face="Oswald">
 	   	<div class="topnav" id="myTopnav">
-          <span class="no">StudentSpace</span>
+          <span disabled class="no">StudentSpace</span>
           <a href="contactus.html">Contact</a>
           <a href="aboutus.html">About</a>
         </div>
@@ -34,7 +34,7 @@ header("location: test.php");
             </div>  
             <div class="mps">
              <button type="button" class="btn btn-default btn">
-                <span class="glyphicon glyphicon-user">
+                <span disabled class="glyphicon glyphicon-user">
                 </span> 
              </button>
              <input type="text" name="name" placeholder=" Enter your Name" required class="inp">
@@ -44,7 +44,7 @@ header("location: test.php");
             </div>  
             <div class="mps">
              <button type="button" class="btn btn-default btn">
-                <span class="glyphicon glyphicon-envelope">
+                <span disabled class="glyphicon glyphicon-envelope">
                 </span> 
              </button>
              <input type="text" name="email" required placeholder=" Enter your Email" class="inp">
@@ -54,7 +54,7 @@ header("location: test.php");
             </div>  
             <div class="mps">
              <button type="button" class="btn btn-default btn">
-                <span class="glyphicon glyphicon-lock">
+                <span disabled class="glyphicon glyphicon-lock">
                 </span> 
              </button>
              <input type="password" name="pass" required placeholder=" Enter Password" class="inp">
@@ -64,7 +64,7 @@ header("location: test.php");
             </div>  
             <div class="mps">
              <button type="button" class="btn btn-default btn">
-                <span class="glyphicon glyphicon-lock">
+                <span disabled class="glyphicon glyphicon-lock">
                 </span> 
              </button>
              <input type="password" name="passconf" required placeholder="Confirm Password" class="inp">
@@ -74,7 +74,7 @@ header("location: test.php");
             </div>  
             <div class="mps">
              <button type="button" class="btn btn-default btn">
-                <span class="glyphicon glyphicon-calendar">
+                <span disabled class="glyphicon glyphicon-calendar">
                 </span> 
              </button>
              <select name="Year">
@@ -89,20 +89,20 @@ header("location: test.php");
             </div>  
             <div class="mps">
              <button type="button" class="btn btn-default btn">
-                <span class="glyphicon glyphicon-user">
+                <span disabled class="glyphicon glyphicon-user">
                 </span> 
              </button>
-             <input type="text" name="rollno" placeholder=" Enter your Roll number" class="inp">
+             <input type="text" required name="rollno" placeholder=" Enter your Roll number" class="inp">
             </div>
                <div class="mps">
             	Branch
             </div>  
             <div class="mps">
              <button type="button" class="btn btn-default btn">
-                <span class="glyphicon glyphicon-education">
+                <span disabled class="glyphicon glyphicon-education">
                 </span> 
              </button>
-             <input type="text" name="branch" placeholder=" Enter your Branch" class="inp">
+             <input type="text" required name="branch" placeholder=" Enter your Branch" class="inp">
             </div>
             <center>
                 <input type="submit" name="regis" value="Register" class="btn btn-success btn-lg reg">

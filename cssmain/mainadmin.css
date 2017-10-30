@@ -157,7 +157,7 @@ hr{
 }
 .thead{
   position: absolute;
-    bottom: 400px;
+    bottom: 420px;
     left: 150px;
     color: white;
     font-size: 3em;
@@ -195,4 +195,7 @@ hr{
     left: 150px;
     bottom: 100px;
   }
+}
+body{
+  overflow-x: hidden;
 }

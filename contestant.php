@@ -19,6 +19,7 @@
   <?php if(isset($_SESSION['login_user'])) echo "<font color='white'><a>Welcome, $login_session</a></font>";?>
           <a href="contactus.html">Contact</a>
           <a href="aboutus.html">About</a>
+          <a href="test.php">Home</a>
 
         </div>
        <div class="task">
@@ -37,7 +38,7 @@
         </div>
 		  <div class="downb">
   <div class="row">
-    <div class="col-xl-6 col-sm-12 alink"><br><br>
+    <div class="col-xl-6 col-sm-12 alink">
       <a href="https://www.google.co.in/maps?q=sies+gst&um=1&ie=UTF-8&sa=X&ved=0ahUKEwj285rZ_YvXAhUB6Y8KHYOWA-EQ_AUIDCgD">
        <div class="downb1">
          <div>
@@ -55,13 +56,13 @@
     </div>
   </div>
     <div class="col-xl-6 downb2">
-      <div class="col-xl-6 col-sm-10 downb2"><br><br>
+      <div class="col-xl-6 col-sm-10 downb2">
       <div>Made by</div>
       <div>Students of</div>
       <div>Computer Department</div>
       <div>SIES GST</div>
     </div></div></div>
-    <br><center><div class="downbl">&copy;Computer Department of SIES GST</div></center>
+   <center><div class="downbl">&copy;Computer Department of SIES GST</div></center>
     </div>
   </div>
 </div>
