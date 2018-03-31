@@ -34,7 +34,7 @@ header("location: test.php");
 <input type="submit" name="login" value="Login" class="btn-primary a btn-round">
 <center><hr class="l" color="black"></center><font color="white">
 </form>
-<button class="btn-success" onclick="location.href='singup.php'">Create a new account</button></font><a href=""><div class="for">Forgot password?</div></a></div>
+<button class="btn-success" onclick="location.href='singup.php'">Create a new account</button></font><a href="Forgot.html"><div class="for">Forgot password?</div></a></div>
 <span><?php echo $error; ?></span>
 </div> 
 </center>
