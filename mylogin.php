@@ -32,9 +32,10 @@ header("location: test.php");
 <input type="text" name="email" required placeholder="Enter your email" class="big" width="80"><br><br>
 <input type="password" name="pass" placeholder="Enter your password" class="big"><br><br>
 <input type="submit" name="login" value="Login" class="btn-primary a btn-round">
+<div><input type="submit" name="forgot" value="Forgot password?" formaction="Forgot.php"></div>
 <center><hr class="l" color="black"></center><font color="white">
 </form>
-<button class="btn-success" onclick="location.href='singup.php'">Create a new account</button></font><a href="Forgot.html"><div class="for">Forgot password?</div></a></div>
+<button class="btn-success" onclick="location.href='singup.php'">Create a new account</button></font></div>
 <span><?php echo $error; ?></span>
 </div> 
 </center>
